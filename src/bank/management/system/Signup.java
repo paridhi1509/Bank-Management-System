@@ -3,8 +3,13 @@ package bank.management.system;
 import javax.swing.*;
 import java.awt.*;
 import java.util.Random;
+import com.toedter.calendar.JDateChooser;
 
 public class Signup extends JFrame {
+    JRadioButton r1,r2;
+
+    JTextField textName, textFather;// globally declared because we need to access data in them for database
+    JDateChooser datechooser;
     Random ran=new Random();
     long first4=(ran.nextLong()%9000L)+1000L;
     // ran.nextLong() generates random long integer(both + and -)
@@ -35,6 +40,53 @@ public class Signup extends JFrame {
         label3.setFont(new Font("Raleway", Font.BOLD, 22));
         label3.setBounds(290,90,600,30);
         add(label3);
+
+        JLabel name=new JLabel("Name :");
+        name.setFont(new Font("Raleway", Font.BOLD, 20));
+        name.setBounds(100,190,100,30);
+        add(name);
+
+        textName= new JTextField();
+        textName.setFont(new Font("Raleway", Font.BOLD,14));
+        textName.setBounds(300,190,400,30);
+        add(textName);
+
+        JLabel Fname=new JLabel("Father's Name :");
+        Fname.setFont(new Font("Raleway", Font.BOLD, 20));
+        Fname.setBounds(100,240,200,30);
+        add(Fname);
+
+        textFather= new JTextField();
+        textFather.setFont(new Font("Raleway", Font.BOLD,14));
+        textFather.setBounds(300,240,400,30);
+        add(textFather);
+
+        JLabel DOB=new JLabel("Date of Birth :");
+        DOB.setFont(new Font("Raleway", Font.BOLD, 20));
+        DOB.setBounds(100,340,200,30);
+        add(DOB);
+
+        datechooser=new JDateChooser();
+        datechooser.setForeground(new Color(105,105,105));
+        datechooser.setBounds(300,340,400,30);
+        add(datechooser);
+
+        JLabel gender=new JLabel("Gender :");
+        gender.setFont(new Font("Raleway",Font.BOLD,20));
+        gender.setBounds(100,390,200,30);
+        add(gender);
+
+        r1=new JRadioButton("Male");
+        r1.setFont(new Font("Raleway",Font.BOLD,14));
+        r2.setBounds(300,290,60,30);
+        add(r1);
+
+        r2=new JRadioButton("Female");
+        r2.setFont(new Font("Raleway",Font.BOLD,14));
+        r2.setBounds(450,290,90,30);
+        add(r2);
+
+
 
         getContentPane().setBackground(new Color(222,255,228));
         setLayout(null);
