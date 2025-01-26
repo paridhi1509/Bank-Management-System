@@ -8,7 +8,7 @@ import com.toedter.calendar.JDateChooser;
 public class Signup extends JFrame {
     JRadioButton r1,r2;
 
-    JTextField textName, textFather;// globally declared because we need to access data in them for database
+    JTextField textName, textFather, textEmail, textMs, textAdd;// globally declared because we need to access data in them for database
     JDateChooser datechooser;
     Random ran=new Random();
     long first4=(ran.nextLong()%9000L)+1000L;
@@ -73,18 +73,54 @@ public class Signup extends JFrame {
 
         JLabel gender=new JLabel("Gender :");
         gender.setFont(new Font("Raleway",Font.BOLD,20));
-        gender.setBounds(100,390,200,30);
+        gender.setBounds(100,290,200,30);
         add(gender);
 
         r1=new JRadioButton("Male");
         r1.setFont(new Font("Raleway",Font.BOLD,14));
-        r2.setBounds(300,290,60,30);
+        r1.setBackground(new Color(222,255,228));
+        r1.setBounds(300,290,60,30);
         add(r1);
 
         r2=new JRadioButton("Female");
         r2.setFont(new Font("Raleway",Font.BOLD,14));
+        r2.setBackground(new Color(222,255,228));
         r2.setBounds(450,290,90,30);
         add(r2);
+
+        ButtonGroup bg=new ButtonGroup();
+        bg.add(r1);
+        bg.add(r2);// doing this so that either male or female can be selected instead of both
+
+        JLabel email=new JLabel("Email address :");
+        email.setFont(new Font("Raleway",Font.BOLD,30));
+        email.setBounds(100,390,200,30);
+        add(email);
+
+        textEmail= new JTextField();
+        textEmail.setFont(new Font("Raleway", Font.BOLD,14));
+        textEmail.setBounds(300,390,400,30);
+        add(textEmail);
+
+        JLabel ms=new JLabel("Marital Status :");
+        ms.setFont(new Font("Raleway",Font.BOLD,30));
+        ms.setBounds(100,440,200,30);
+        add(ms);
+
+        textMs= new JTextField();
+        textMs.setFont(new Font("Raleway", Font.BOLD,14));
+        textMs.setBounds(300,440,400,30);
+        add(textMs);
+
+        JLabel address=new JLabel("Address :");
+        address.setFont(new Font("Raleway",Font.BOLD,30));
+        address.setBounds(100,490,200,30);
+        add(address);
+
+        JTextField textAdd = new JTextField();
+        textAdd.setFont(new Font("Raleway", Font.BOLD,14));
+        textAdd.setBounds(300,440,400,30);
+        add(textAdd);
 
 
 
