@@ -2,13 +2,16 @@ package bank.management.system;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.util.Random;
 import com.toedter.calendar.JDateChooser;
 
-public class Signup extends JFrame {
-    JRadioButton r1,r2;
+public class Signup extends JFrame implements ActionListener {
+    JRadioButton r1,r2, r3, r4, r5;
+    JButton next;
 
-    JTextField textName, textFather, textEmail, textMs, textAdd;// globally declared because we need to access data in them for database
+    JTextField textName, textFather, textEmail, textAdd, textPin, textState;// globally declared because we need to access data in them for database
     JDateChooser datechooser;
     Random ran=new Random();
     long first4=(ran.nextLong()%9000L)+1000L;
@@ -107,10 +110,29 @@ public class Signup extends JFrame {
         ms.setBounds(100,440,200,30);
         add(ms);
 
-        textMs= new JTextField();
-        textMs.setFont(new Font("Raleway", Font.BOLD,14));
-        textMs.setBounds(300,440,400,30);
-        add(textMs);
+        r3=new JRadioButton("Married");
+        r3.setFont(new Font("Raleway",Font.BOLD,14));
+        r3.setBackground(new Color(222,255,228));
+        r3.setBounds(300,440,100,30);
+        add(r3);
+
+        r4=new JRadioButton("Unmarried");
+        r4.setFont(new Font("Raleway",Font.BOLD,14));
+        r4.setBackground(new Color(222,255,228));
+        r4.setBounds(450,440,100,30);
+        add(r4);
+
+        r5=new JRadioButton("Other");
+        r5.setFont(new Font("Raleway",Font.BOLD,14));
+        r5.setBackground(new Color(222,255,228));
+        r5.setBounds(600,440,100,30);
+        add(r5);
+
+        ButtonGroup bg1=new ButtonGroup();
+        bg1.add(r3);
+        bg1.add(r4);
+        bg1.add(r5);
+
 
         JLabel address=new JLabel("Address :");
         address.setFont(new Font("Raleway",Font.BOLD,20));
@@ -132,7 +154,33 @@ public class Signup extends JFrame {
         textCity.setBounds(300,540,400,30);
         add(textCity);
 
+        JLabel pincode=new JLabel("Pincode :");
+        pincode.setFont(new Font("Raleway",Font.BOLD,20));
+        pincode.setBounds(100,590,200,30);
+        add(pincode);
 
+        JTextField textPin = new JTextField();
+        textPin.setFont(new Font("Raleway", Font.BOLD,14));
+        textPin.setBounds(300,590,400,30);
+        add(textPin);
+
+        JLabel state=new JLabel("State :");
+        state.setFont(new Font("Raleway",Font.BOLD,20));
+        state.setBounds(100,640,200,30);
+        add(state);
+
+        JTextField textState = new JTextField();
+        textState.setFont(new Font("Raleway", Font.BOLD,14));
+        textState.setBounds(300,640,400,30);
+        add(textState);
+
+        next= new JButton("Next");
+        next.setFont(new Font("Raleway", Font.BOLD, 14));
+        next.setBackground(Color.BLACK);
+        next.setForeground(Color.WHITE);
+        next.setBounds(620,710,80,30);
+        add(next);
+        next.addActionListener(this);
 
         getContentPane().setBackground(new Color(222,255,228));
         setLayout(null);
@@ -141,6 +189,11 @@ public class Signup extends JFrame {
         setVisible(true);
 
     }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+    }
+
     public static void main(String[] args) {
         new Signup();
     }
