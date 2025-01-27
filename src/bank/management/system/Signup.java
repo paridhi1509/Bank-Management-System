@@ -93,7 +93,7 @@ public class Signup extends JFrame {
         bg.add(r2);// doing this so that either male or female can be selected instead of both
 
         JLabel email=new JLabel("Email address :");
-        email.setFont(new Font("Raleway",Font.BOLD,30));
+        email.setFont(new Font("Raleway",Font.BOLD,20));
         email.setBounds(100,390,200,30);
         add(email);
 
@@ -103,7 +103,7 @@ public class Signup extends JFrame {
         add(textEmail);
 
         JLabel ms=new JLabel("Marital Status :");
-        ms.setFont(new Font("Raleway",Font.BOLD,30));
+        ms.setFont(new Font("Raleway",Font.BOLD,20));
         ms.setBounds(100,440,200,30);
         add(ms);
 
@@ -113,14 +113,24 @@ public class Signup extends JFrame {
         add(textMs);
 
         JLabel address=new JLabel("Address :");
-        address.setFont(new Font("Raleway",Font.BOLD,30));
+        address.setFont(new Font("Raleway",Font.BOLD,20));
         address.setBounds(100,490,200,30);
         add(address);
 
         JTextField textAdd = new JTextField();
         textAdd.setFont(new Font("Raleway", Font.BOLD,14));
-        textAdd.setBounds(300,440,400,30);
+        textAdd.setBounds(300,490,400,30);
         add(textAdd);
+
+        JLabel city=new JLabel("City :");
+        city.setFont(new Font("Raleway",Font.BOLD,20));
+        city.setBounds(100,540,200,30);
+        add(city);
+
+        JTextField textCity = new JTextField();
+        textCity.setFont(new Font("Raleway", Font.BOLD,14));
+        textCity.setBounds(300,540,400,30);
+        add(textCity);
 
 
 
