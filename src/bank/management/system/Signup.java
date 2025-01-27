@@ -11,7 +11,7 @@ public class Signup extends JFrame implements ActionListener {
     JRadioButton r1,r2, r3, r4, r5;
     JButton next;
 
-    JTextField textName, textFather, textEmail, textAdd, textPin, textState;// globally declared because we need to access data in them for database
+    JTextField textName, textFather, textEmail, textAdd, textPin, textState, textCity;// globally declared because we need to access data in them for database
     JDateChooser datechooser;
     Random ran=new Random();
     long first4=(ran.nextLong()%9000L)+1000L;
@@ -192,6 +192,29 @@ public class Signup extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        String formno=first;
+        String name=textName.getText();
+        String fname=textFather.getText();
+        String dob=((JTextField) datechooser.getDateEditor().getUiComponent()).getText();
+        String gender=null;
+        if(r1.isSelected()){
+            gender="Male";
+        }else if(r2.isSelected()){
+            gender="Female";
+        }
+        String email=textEmail.getText();
+        String marital=null;
+        if(r3.isSelected()){
+            marital="Married";
+        }else if(r4.isSelected()){
+            marital="Unmarried";
+        }else if(r5.isSelected()){
+            marital="Other";
+        }
+        String address=textAdd.getText();
+        String city=textCity.getText();
+        String pincode=textPin.getText();
+        String state=textState.getText();
     }
 
     public static void main(String[] args) {
