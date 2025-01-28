@@ -139,7 +139,7 @@ public class Signup extends JFrame implements ActionListener {
         address.setBounds(100,490,200,30);
         add(address);
 
-        JTextField textAdd = new JTextField();
+        textAdd = new JTextField();
         textAdd.setFont(new Font("Raleway", Font.BOLD,14));
         textAdd.setBounds(300,490,400,30);
         add(textAdd);
@@ -149,7 +149,7 @@ public class Signup extends JFrame implements ActionListener {
         city.setBounds(100,540,200,30);
         add(city);
 
-        JTextField textCity = new JTextField();
+        textCity = new JTextField();
         textCity.setFont(new Font("Raleway", Font.BOLD,14));
         textCity.setBounds(300,540,400,30);
         add(textCity);
@@ -159,7 +159,7 @@ public class Signup extends JFrame implements ActionListener {
         pincode.setBounds(100,590,200,30);
         add(pincode);
 
-        JTextField textPin = new JTextField();
+        textPin = new JTextField();
         textPin.setFont(new Font("Raleway", Font.BOLD,14));
         textPin.setBounds(300,590,400,30);
         add(textPin);
@@ -169,7 +169,7 @@ public class Signup extends JFrame implements ActionListener {
         state.setBounds(100,640,200,30);
         add(state);
 
-        JTextField textState = new JTextField();
+        textState = new JTextField();
         textState.setFont(new Font("Raleway", Font.BOLD,14));
         textState.setBounds(300,640,400,30);
         add(textState);
@@ -179,8 +179,8 @@ public class Signup extends JFrame implements ActionListener {
         next.setBackground(Color.BLACK);
         next.setForeground(Color.WHITE);
         next.setBounds(620,710,80,30);
-        add(next);
         next.addActionListener(this);
+        add(next);
 
         getContentPane().setBackground(new Color(222,255,228));
         setLayout(null);

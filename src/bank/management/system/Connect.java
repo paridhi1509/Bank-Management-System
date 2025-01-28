@@ -1,6 +1,5 @@
 package bank.management.system;
 import java.sql.*;
-import java.sql.DriverManager;
 
 public class Connect{
     Connection connection;
