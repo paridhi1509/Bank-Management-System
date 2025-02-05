@@ -13,7 +13,7 @@ public  class Signup2 extends JFrame implements ActionListener {
     JTextField   PAN, Aadhar;
     JRadioButton r1,r2,e1,e2;
     JButton next;
-    Signup2(String first){
+    Signup2(String formno){
         super("APPLICATION FORM");
 
         ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
