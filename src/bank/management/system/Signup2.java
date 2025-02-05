@@ -1,11 +1,18 @@
 package bank.management.system;
 
+import org.w3c.dom.Text;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-public class Signup2 extends JFrame {
-    JComboBox comboBox, comboBox2, comboBox3, comboBox4; // adds a dropdown of given array
+public  class Signup2 extends JFrame implements ActionListener {
+    JComboBox comboBox, comboBox2, comboBox3, comboBox4,comboBox5; // adds a dropdown of given array
     String formno;
+    JTextField   PAN, Aadhar;
+    JRadioButton r1,r2,e1,e2;
+    JButton next;
     Signup2(String first){
         super("APPLICATION FORM");
 
@@ -76,6 +83,95 @@ public class Signup2 extends JFrame {
         comboBox4.setBounds(350,270,320,30);
         add(comboBox4);
 
+        JLabel l7 = new JLabel("Occupation : ");
+        l7.setFont(new Font("Raleway", Font.BOLD,18));
+        l7.setBounds(100,340,150,30);
+        add(l7);
+
+        String Occupation [] = {"Salaried","Self-Employed","Business", "Student", "Retired", "Other"};
+        comboBox5 = new JComboBox(Occupation);
+        comboBox5.setBackground(new Color(252,208,76));
+        comboBox5.setFont(new Font("Raleway",Font.BOLD,14));
+        comboBox5.setBounds(350,340,320,30);
+        add(comboBox5);
+
+        JLabel l8 = new JLabel("PAN Number : ");
+        l8.setFont(new Font("Raleway", Font.BOLD,18));
+        l8.setBounds(100,390,150,30);
+        add(l8);
+
+        PAN = new JTextField();
+        PAN.setFont(new Font("Raleway", Font.BOLD,18));
+        PAN.setBounds(350,390,320,30);
+        add(PAN);
+
+        JLabel l9 = new JLabel("Aadhar Number : ");
+        l9.setFont(new Font("Raleway", Font.BOLD,18));
+        l9.setBounds(100,440,180,30);
+        add(l9);
+
+        Aadhar = new JTextField();
+        Aadhar.setFont(new Font("Raleway", Font.BOLD,18));
+        Aadhar.setBounds(350,440,320,30);
+        add(Aadhar);
+
+        JLabel l10 = new JLabel("Senior Citizen : ");
+        l10.setFont(new Font("Raleway", Font.BOLD,18));
+        l10.setBounds(100,490,180,30);
+        add(l10);
+
+        r1 = new JRadioButton("Yes");
+        r1.setFont(new Font("Raleway", Font.BOLD,14));
+        r1.setBackground(new Color(252,208,76));
+        r1.setBounds(350,490,100,30);
+        add(r1);
+        r2 = new JRadioButton("No");
+        r2.setFont(new Font("Raleway", Font.BOLD,14));
+        r2.setBackground(new Color(252,208,76));
+        r2.setBounds(460,490,100,30);
+        add(r2);
+
+         ButtonGroup bg1=new ButtonGroup();
+         bg1.add(r1);
+         bg1.add(r2);
+
+        JLabel l11 = new JLabel("Existing Account : ");
+        l11.setFont(new Font("Raleway", Font.BOLD,18));
+        l11.setBounds(100,540,180,30);
+        add(l11);
+
+        e1 = new JRadioButton("Yes");
+        e1.setFont(new Font("Raleway", Font.BOLD,14));
+        e1.setBackground(new Color(252,208,76));
+        e1.setBounds(350,540,100,30);
+        add(e1);
+        e2 = new JRadioButton("No");
+        e2.setFont(new Font("Raleway", Font.BOLD,14));
+        e2.setBackground(new Color(252,208,76));
+        e2.setBounds(460,540,100,30);
+        add(e2);
+
+        ButtonGroup bg2=new ButtonGroup();
+        bg2.add(e1);
+        bg2.add(e2);
+
+        JLabel l12 = new JLabel("Form No : ");
+        l12.setFont(new Font("Raleway", Font.BOLD,14));
+        l12.setBounds(700,10,100,30);
+        add(l12);
+
+        JLabel l13 = new JLabel(formno);
+        l13.setFont(new Font("Raleway", Font.BOLD,14));
+        l13.setBounds(760,10,60,30);
+        add(l13);
+
+        next = new JButton("Next");
+        next.setFont(new Font("Raleway",Font.BOLD,14));
+        next.setBackground(Color.WHITE);
+        next.setForeground(Color.BLACK);
+        next.setBounds(570,640,100,30);
+        next.addActionListener(this);
+        add(next);
 
 
         setLayout(null);
@@ -83,6 +179,11 @@ public class Signup2 extends JFrame {
         setLocation(450,80);
         getContentPane().setBackground(new Color(252,208,76));
         setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 
     public static void main(String[] args) {
