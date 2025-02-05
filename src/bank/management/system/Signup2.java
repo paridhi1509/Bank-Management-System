@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Signup2 extends JFrame {
-    JComboBox comboBox, comboBox2, comboBox3; // adds a dropdown of given array
+    JComboBox comboBox, comboBox2, comboBox3, comboBox4; // adds a dropdown of given array
     String formno;
     Signup2(String first){
         super("APPLICATION FORM");
@@ -66,15 +66,15 @@ public class Signup2 extends JFrame {
 
         JLabel l6=new JLabel("EDUCATIONAL :");
         l6.setFont(new Font("Raleway", Font.BOLD,18));
-        l6.setBounds(100,170,150,30);
+        l6.setBounds(100,270,150,30);
         add(l6);
 
-        String category[]={"General", "OBC", "SC", "ST", "Other"};
-        comboBox2=new JComboBox(category);
-        comboBox2.setBackground(new Color(252,208,76));
-        comboBox2.setFont(new Font("Raleway", Font.BOLD,14));
-        comboBox2.setBounds(350,170,320,30);
-        add(comboBox2);
+        String Educational[]={"Non-Graduate", "Graduate", "Post-Graduate", "Doctorate", "Other"};
+        comboBox4=new JComboBox(category);
+        comboBox4.setBackground(new Color(252,208,76));
+        comboBox4.setFont(new Font("Raleway", Font.BOLD,14));
+        comboBox4.setBounds(350,270,320,30);
+        add(comboBox4);
 
 
 
