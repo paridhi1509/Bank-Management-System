@@ -69,6 +69,7 @@ add(l3);
                 }
             }else if(e.getSource()==b2){
                 setVisible(false);
+                new main_Class(pin);
             }
         }catch(Exception E){
             E.printStackTrace();
