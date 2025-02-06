@@ -87,6 +87,9 @@ public class main_Class extends JFrame implements ActionListener {
                 setVisible(false);
             }else if(e.getSource()==b7){
                 System.exit(0);// closes the whole program but to close particular frame we use setVisible(false)
+            }else if(e.getSource()==b2){
+                new Withdrawal(pin);
+                setVisible(false);
             }
 
     }
