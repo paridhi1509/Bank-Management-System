@@ -86,7 +86,7 @@ public class Withdrawal extends JFrame implements ActionListener {
                         JOptionPane.showMessageDialog(null, "Insufficient Balance");
                         return;
                     }
-                    c.statement.executeUpdate("insert into bank values('" + pin + "','" + date + "','Withdrawl','" + amount + "')");
+                    c.statement.executeUpdate("insert into bank values('" + pin + "','" + date + "','Withdrawal','" + amount + "')");
                     JOptionPane.showMessageDialog(null, "Rs. " + amount + " debited successfully");
                     setVisible(false);
                     new main_Class(pin);
