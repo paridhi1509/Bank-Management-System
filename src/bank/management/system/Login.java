@@ -28,14 +28,14 @@ public class Login extends JFrame implements ActionListener {
         add(iimage);
 
         label1=new JLabel("WELCOME TO ATM");
-        label1.setForeground(Color.white);
+        label1.setForeground(new Color(104,4,30));
         label1.setFont(new Font("AvantGarde",Font.BOLD, 38));
         label1.setBounds(230,125,450,40);
         add(label1);
 
         label2=new JLabel("Card No:");
         label2.setFont(new Font("Ralway", Font.BOLD, 28));
-        label2.setForeground(Color.white);
+        label2.setForeground(new Color(104, 4, 30));
         label2.setBounds(150,190,375,30);
         add(label2);
 
@@ -46,7 +46,7 @@ public class Login extends JFrame implements ActionListener {
 
         label3=new JLabel("PIN:");
         label3.setFont(new Font("Ralway", Font.BOLD, 28));
-        label3.setForeground(Color.white);
+        label3.setForeground(new Color(104,4,30));
         label3.setBounds(150,250,375,30);
         add(label3);
 
@@ -80,7 +80,7 @@ public class Login extends JFrame implements ActionListener {
         add(button3);
 
 
-        ImageIcon iii1=new ImageIcon(ClassLoader.getSystemResource("Icons/backbg.png"));
+        ImageIcon iii1=new ImageIcon(ClassLoader.getSystemResource("Icons/bg1.jpg"));
         Image iii2=iii1.getImage().getScaledInstance(850,480, Image.SCALE_DEFAULT);
         ImageIcon iii3=new ImageIcon(iii2);
         JLabel iiimage=new JLabel(iii3);
