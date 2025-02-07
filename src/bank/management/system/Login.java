@@ -13,7 +13,7 @@ public class Login extends JFrame implements ActionListener {
     JButton button1,button2,button3;
     Login(){
         super("Bank Management System");// title of frame
-        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("Icons/bank.png"));
+        ImageIcon i1=new ImageIcon(ClassLoader.getSystemResource("Icons/bank11.png"));
         Image i2=i1.getImage().getScaledInstance(100,100, Image.SCALE_DEFAULT);
         ImageIcon i3=new ImageIcon(i2);
         JLabel image=new JLabel(i3);
