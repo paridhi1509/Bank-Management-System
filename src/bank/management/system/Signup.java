@@ -70,7 +70,7 @@ public class Signup extends JFrame implements ActionListener {
         add(DOB);
 
         datechooser=new JDateChooser();
-        datechooser.setForeground(new Color(105,105,105));
+        datechooser.setForeground(new Color(151, 196, 159));
         datechooser.setBounds(300,340,400,30);
         add(datechooser);
 
@@ -81,13 +81,13 @@ public class Signup extends JFrame implements ActionListener {
 
         r1=new JRadioButton("Male");
         r1.setFont(new Font("Raleway",Font.BOLD,14));
-        r1.setBackground(new Color(222,255,228));
+        r1.setBackground(new Color(151, 196, 159));
         r1.setBounds(300,290,60,30);
         add(r1);
 
         r2=new JRadioButton("Female");
         r2.setFont(new Font("Raleway",Font.BOLD,14));
-        r2.setBackground(new Color(222,255,228));
+        r2.setBackground(new Color(151, 196, 159));
         r2.setBounds(450,290,90,30);
         add(r2);
 
@@ -112,19 +112,19 @@ public class Signup extends JFrame implements ActionListener {
 
         r3=new JRadioButton("Married");
         r3.setFont(new Font("Raleway",Font.BOLD,14));
-        r3.setBackground(new Color(222,255,228));
+        r3.setBackground(new Color(151, 196, 159));
         r3.setBounds(300,440,100,30);
         add(r3);
 
         r4=new JRadioButton("Unmarried");
         r4.setFont(new Font("Raleway",Font.BOLD,14));
-        r4.setBackground(new Color(222,255,228));
+        r4.setBackground(new Color(151, 196, 159));
         r4.setBounds(450,440,100,30);
         add(r4);
 
         r5=new JRadioButton("Other");
         r5.setFont(new Font("Raleway",Font.BOLD,14));
-        r5.setBackground(new Color(222,255,228));
+        r5.setBackground(new Color(151, 196, 159));
         r5.setBounds(600,440,100,30);
         add(r5);
 
@@ -182,7 +182,7 @@ public class Signup extends JFrame implements ActionListener {
         next.addActionListener(this);
         add(next);
 
-        getContentPane().setBackground(new Color(222,255,228));
+        getContentPane().setBackground(new Color(151, 196, 159));
         setLayout(null);
         setSize(850,800);
         setLocation(360,40);
